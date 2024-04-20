@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfie Corthine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #5ea168; /* Accent color */
+        }
+
+        a {
+            color: #5ea168; /* Accent color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: #5ea168;
+            padding: 20px;
+            color: #fff;
+            z-index: 999;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .menu.active {
+            transform: translateX(0);
+        }
+
+        .menu h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #457255;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        .menu-toggle .bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #5ea168;
+            margin: 6px auto;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .menu-toggle.active .bar:first-child {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .bar:last-child {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <div class="menu">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#currently-studying">Currently Studying</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#current-projects">Current Projects</a></li>
+        </ul>
+    </div>
+
+    <div class="content" id="home">
+        <h1>Alfie Corthine</h1>
+        <h2>Stowe School</h2>
+        <div class="profile-links">
+            <a href="https://github.com/AlfieCorthine">GitHub</a> |
+            <a href="https://steamcommunity.com/profiles/76561199155823314/">Steam</a>
+        </div>
+    </div>
+
+    <div class="content" id="qualifications">
+        <h1>Qualifications</h1>
+
+        <h2>Digital and Computing</h2>
+        <ul>
+            <li>Data and processes in computing</li>
+            <li>Designing the user interface: text, colour, images, moving images and sound</li>
+            <li>Digital communications</li>
+            <li>Digital forensics</li>
+            <li>Digital skills: succeeding in a digital world</li>
+            <li>Digital thinking tools for better decision making</li>
+            <li>Exploring communications technology</li>
+            <li>Gamified Intelligent Cyber Aptitude and Skills Training (GICAST)</li>
+            <li>Information security</li>
+            <li>Integrated safety, health and environmental management: An introduction</li>
+            <li>Internet of everything</li>
+            <li>Introducing computing and IT</li>
+            <li>Introducing ICT systems</li>
+            <li>An introduction to computers and computer systems</li>
+            <li>Introduction to cyber security: stay safe online</li>
+            <li>An introduction to interaction design</li>
+            <li>An introduction to software development</li>
+            <li>An introduction to web applications architecture</li>
+            <li>IT in everyday life</li>
+            <li>Learn to code for data analysis</li>
+            <li>Learning from major cyber security incidents</li>
+            <li>Machines, minds and computers</li>
+            <li>Managing complexity: A systems approach – introduction</li>
+            <li>Managing virtual project teams</li>
+            <li>Network security</li>
+            <li>Presenting information</li>
+            <li>Project governance and Project Management Office (PMO)</li>
+            <li>Simple coding</li>
+            <li>Software and the law</li>
+            <li>Software development for enterprise systems</li>
+            <li>Successful IT systems</li>
+            <li>Systems diagramming</li>
+            <li>Systems thinking and practice</li>
+            <li>Visualisation: visual representations of data and information</li>
+        </ul>
+
+        <h2>Miscellaneous</h2>
+        <ul>
+            <li>Assessing risk in engineering, work and life</li>
+            <li>Approaches to software development</li>
+            <li>Can renewable energy sources power the world?</li>
+            <li>Data analysis: visualisations in Excel</li>
+            <li>Diagrams, charts and graphs</li>
+            <li>Electronic applications</li>
+            <li>Engineering: environmental fluids</li>
+            <li>Engineering: The challenge of temperature</li>
+            <li>Engineering: The nature of problems</li>
+            <li>Ethics in science?</li>
+            <li>Groups and teamwork</li>
+            <li>Health and safety in the laboratory and field</li>
+            <li>Information security</li>
+            <li>Introducing engineering</li>
+            <li>Introducing technology and innovation management</li>
+            <li>Introducing vectors for engineering applications</li>
+            <li>Introduction to analysis</li>
+            <li>Introduction to computational thinking</li>
+            <li>An introduction to design engineering</li>
+            <li>An introduction to electronics</li>
+            <li>An introduction to software development</li>
+            <li>IT: device to device communication</li>
+            <li>Returning to STEM</li>
+            <li>The science of nuclear energy</li>
+            <li>Systems engineering: Challenging complexity</li>
+            <li>Toys and engineering materials</li>
+        </ul>
+    </div>
+
+    <div class="content" id="currently-studying">
+        <h1>Currently Studying</h1>
+        <ul>
+            <li>Maths - GCSE</li>
+            <li>English Language - GCSE</li>
+            <li>English Literature - GCSE</li>
+            <li>Biology - GCSE</li>
+            <li>Chemistry - GCSE</li>
+            <li>Physics - GCSE</li>
+            <li>Art - GCSE</li>
+            <li>History - GCSE</li>
+            <li>French - GCSE</li>
+            <li>Computer Science - GCSE</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
