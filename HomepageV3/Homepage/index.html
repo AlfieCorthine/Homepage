@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfie Corthine</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #5ea168; /* Accent color */
+        }
+
+        a {
+            color: #5ea168; /* Accent color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            padding-top: 80px; /* Adjust to match the height of your header */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .menu.active {
+            transform: translateX(0);
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu ul li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .menu ul li a {
+            color: #333;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1000;
+                cursor: pointer;
+            }
+
+            .menu {
+                width: 80%;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Alfie Corthine</h1>
+    <div class="profile-links">
+        <a href="https://github.com/AlfieCorthine">GitHub</a> |
+        <a href="https://steamcommunity.com/profiles/76561199155823314/">Steam</a>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776; Menu</div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="qualifications.html">Qualifications</a></li>
+            <li><a href="currently_studying.html">Currently Studying</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="current_projects.html">Current Projects</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
